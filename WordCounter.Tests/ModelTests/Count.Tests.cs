@@ -17,12 +17,17 @@ namespace WordCounter.Tests
     {
       keyString = "Pickle";
       stringToCheck = "I pickle, you pickle, we all pickle.";
-      newCounter = newCounter(keyString,stringToCheck);
+      newCounter = new Counter(keyString,stringToCheck);
     }
     [TestCleanup]
     public void TearDown()
     {
       newCounter = null;
+    }
+    [TestMethod]
+    public void Constructor_ConstructorBuildsClassObject_Counter()
+    {
+      Assert.AreEqual(newCounter.GetType(),typeof(Counter));
     }
   }
 }   
