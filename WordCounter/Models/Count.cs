@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace WordCounter.Models
 {
@@ -48,7 +49,7 @@ namespace WordCounter.Models
         string[] newItem = item.Split(Punctuation);
         foreach(string foo in newItem)
         {
-          if(foo != "")
+          if(foo != "." && foo != "," && foo !=  "(" && foo !=  ")" && foo !=  "!" && foo !=  "?" && foo !=" " && foo != "")
           {
             MasterList.Add(foo);
           }
