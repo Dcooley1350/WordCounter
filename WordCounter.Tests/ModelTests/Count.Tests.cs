@@ -44,6 +44,25 @@ namespace WordCounter.Tests
       newCounter.ToLowerCase();
       Assert.AreEqual(correctCounter.MasterSentence, newCounter.MasterSentence);
     }
+    [TestMethod]
+    public void ToArray_ChangesStringToAnArray_StringArray()
+    {
+      string[] correctArray = {"i","pickle,","you","pickle,","we","all","pickle."};
+      newCounter.ToLowerCase();
+      string[] newArray = newCounter.ToArray();
+      CollectionAssert.AreEqual(newArray,correctArray);
+    }
+    [TestMethod]
+    public void RemovePunctuation_RemovesAllPunctuationFromArray_StringArray()
+    {
+      List<string> correctList = new List<string>{"i","pickle","you","pickle","we","all","pickle"};
+      newCounter.ToLowerCase();
+      string[] newArray = newCounter.ToArray();
+      newCounter.RemovePunctuation(newArray);
+      System.Console.WriteLine(newCounter.MasterList[6]);
+      bool yeet = newCounter.MasterList.SequenceEqual(correctList);
+      Assert.AreEqual(true,yeet);
+    }
   }
 }   
 

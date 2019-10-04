@@ -16,7 +16,8 @@ _The purpose of this application is to take a word and a sentence from a user, t
 |:---------------------------|:-------------|:------|
 |Takes a single word input to be checked for.|"pickle","two pickle"|true, Error|
 |Converts all words in sentence and keyword to lower case for comparison|"Pickle","Two Pickle"|"pickle","two pickle"|
-|Converts sentence into a list of words to be checked(solving pickle vs pickles issue)|"two pickle"|"two","pickle"|
+|Converts sentence into an array of words to be checked(solving pickle vs pickles issue)|"two pickle"|"two","pickle"|
+|Removes all punctuation|"I pickle, you pickle."|("I","pickle","you","pickle")|
 |If the sentence does not contain the string, program notifies user|"pickle", "Contains no PickleS"|"The sentence does not contain 'pickle'."|
 |Counts the number of instances of keyword in sentence|"I pickle, you pickle, we all pickle!"|3|
 
