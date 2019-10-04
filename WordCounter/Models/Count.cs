@@ -56,5 +56,16 @@ namespace WordCounter.Models
         }
       }
     }
+    public string ReturnError()
+    {
+      if(MasterList.Contains(MasterWord))
+      {
+        return "Occurances of your keyword in the sentence:";
+      }
+      else
+      {
+        return "The sentence does not contain your keyword. Idiot.";
+      }
+    }
   }
 }

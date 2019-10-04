@@ -59,9 +59,26 @@ namespace WordCounter.Tests
       newCounter.ToLowerCase();
       string[] newArray = newCounter.ToArray();
       newCounter.RemovePunctuation(newArray);
-      System.Console.WriteLine(newCounter.MasterList[6]);
       bool yeet = newCounter.MasterList.SequenceEqual(correctList);
       Assert.AreEqual(true,yeet);
+    }
+    [TestMethod]
+    public void ReturnError_ReturnErrorIfSentenceDoesNotIncludeWord_String()
+    {
+      string errorExpected = "Occurances of your keyword in the sentence:";
+      newCounter.ToLowerCase();
+      string[] newArray = newCounter.ToArray();
+      newCounter.RemovePunctuation(newArray);
+      System.Console.WriteLine(newCounter.MasterWord);
+      foreach(string item in newCounter.MasterList)
+      {
+        System.Console.WriteLine(item);
+      }
+      System.Console.WriteLine(newCounter.MasterList.Contains(newCounter.MasterWord));
+      System.Console.WriteLine(newCounter.ReturnError());
+      string mystring = newCounter.ReturnError();
+      Assert.AreEqual(mystring,errorExpected);   
+
     }
   }
 }   
