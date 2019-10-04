@@ -29,6 +29,12 @@ namespace WordCounter.Tests
     {
       Assert.AreEqual(newCounter.GetType(),typeof(Counter));
     }
+    [TestMethod]
+    public void SingleWord_ChecksKeywordisoneword_True()
+    {
+      bool single = newCounter.SingleWord();
+      Assert.AreEqual(single,true);
+    }
   }
 }   
 

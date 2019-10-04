@@ -16,5 +16,19 @@ namespace WordCounter.Models
       MasterList = new List<string>{};
       WordCount = 0;
     }
+    public bool SingleWord()
+    {
+      string[] stringArray = MasterWord.Split(" ");
+      if (stringArray.Length != 1)
+      {
+        MasterWord = "";
+        return false;
+      }
+      else
+      {
+        return true;
+      }
+      
+    }
   }
 }
