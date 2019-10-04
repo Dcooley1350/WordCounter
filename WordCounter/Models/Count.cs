@@ -28,7 +28,11 @@ namespace WordCounter.Models
       {
         return true;
       }
-      
+    }
+    public void ToLowerCase()
+    {
+      MasterWord = MasterWord.ToLower();
+      MasterSentence = MasterSentence.ToLower();
     }
   }
 }

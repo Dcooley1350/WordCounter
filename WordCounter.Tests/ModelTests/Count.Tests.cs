@@ -35,6 +35,15 @@ namespace WordCounter.Tests
       bool single = newCounter.SingleWord();
       Assert.AreEqual(single,true);
     }
+    [TestMethod]
+    public void ToLowerCase_ConvertsAllInputsToLowerCase_String()
+    {
+      string correctKey = "pickle";
+      string correctMaster = "i pickle, you pickle, we all pickle.";
+      Counter correctCounter = new Counter(correctKey,correctMaster);
+      newCounter.ToLowerCase();
+      Assert.AreEqual(correctCounter.MasterSentence, newCounter.MasterSentence);
+    }
   }
 }   
 
