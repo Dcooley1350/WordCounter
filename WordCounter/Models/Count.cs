@@ -20,12 +20,11 @@ namespace WordCounter.Models
       Punctuation = new char[]{',','.','(',')','!','?'};
       WordCount = 0;
     }
-    public bool SingleWord()
+    public static bool SingleWord(string word)
     {
-      string[] stringArray = MasterWord.Split(" ");
+      string[] stringArray = word.Split(" ");
       if (stringArray.Length != 1)
       {
-        MasterWord = "";
         return false;
       }
       else

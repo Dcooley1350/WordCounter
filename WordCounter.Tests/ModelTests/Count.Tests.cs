@@ -32,7 +32,7 @@ namespace WordCounter.Tests
     [TestMethod]
     public void SingleWord_ChecksKeywordisoneword_True()
     {
-      bool single = newCounter.SingleWord();
+      bool single = Counter.SingleWord(keyString);
       Assert.AreEqual(single,true);
     }
     [TestMethod]
