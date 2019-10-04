@@ -12,7 +12,13 @@ namespace WordCounter
             System.Console.WriteLine("Next, enter the sentence or paragraph that you would like to check:");
             string keySentence = Console.ReadLine();
             Counter newCounter = new Counter(keyWord,keySentence);
-            
+            newCounter.SingleWord();
+            newCounter.ToLowerCase();
+            string[] newArray = newCounter.ToArray();
+            newCounter.RemovePunctuation(newArray);
+            newCounter.ReturnError();
+            newCounter.CountOccurances();
+            System.Console.WriteLine(newCounter.WordCount);
         }
     }
 }
