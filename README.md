@@ -4,13 +4,15 @@
 
 #### By _**Devin Cooley**_
 
+## Project Location ##
+
+_https://github.com/Dcooley1350/WordCounter_
+
 ## Description
 
 _The purpose of this application is to take a word and a sentence from a user, then count the number of occurances of that word in the sentence._
 
 ## Specifications
-
-### User Interface
 
 | Spec                      |Input          | Output |
 |:---------------------------|:-------------|:------|
