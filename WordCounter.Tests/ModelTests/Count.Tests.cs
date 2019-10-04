@@ -69,16 +69,19 @@ namespace WordCounter.Tests
       newCounter.ToLowerCase();
       string[] newArray = newCounter.ToArray();
       newCounter.RemovePunctuation(newArray);
-      System.Console.WriteLine(newCounter.MasterWord);
-      foreach(string item in newCounter.MasterList)
-      {
-        System.Console.WriteLine(item);
-      }
-      System.Console.WriteLine(newCounter.MasterList.Contains(newCounter.MasterWord));
-      System.Console.WriteLine(newCounter.ReturnError());
       string mystring = newCounter.ReturnError();
       Assert.AreEqual(mystring,errorExpected);   
 
+    }
+    [TestMethod]
+    public void CountOccurances_CountsTheNumberofOccurances_int()
+    {
+      int expectedCount =  3;
+      newCounter.ToLowerCase();
+      string[] newArray = newCounter.ToArray();
+      newCounter.RemovePunctuation(newArray);
+      newCounter.CountOccurances();
+      Assert.AreEqual(newCounter.WordCount,expectedCount);
     }
   }
 }   

@@ -67,5 +67,15 @@ namespace WordCounter.Models
         return "The sentence does not contain your keyword. Idiot.";
       }
     }
+    public void CountOccurances()
+    {
+      foreach(string item in MasterList)
+      {
+        if(item == MasterWord)
+        {
+          WordCount++;
+        }
+      }
+    }
   }
 }
